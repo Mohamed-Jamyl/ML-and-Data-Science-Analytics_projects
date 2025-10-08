@@ -11150,7 +11150,7 @@ And if memory is not enough, you can set `force_col_wise=true`.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'bank customer churn test data.xlsx'</span><span class="p">)</span>
@@ -11173,7 +11173,6 @@ And if memory is not enough, you can set `force_col_wise=true`.
 
 <span class="n">original_data</span><span class="p">[</span><span class="s1">'Customer_Status_Predicted'</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_predictions</span>
 
-<span class="c1"># # Filter the DataFrame to include only records predicted as "Churned"</span>
 <span class="c1"># original_data = original_data[original_data['Customer_Status_Predicted']==1]</span>
 
 <span class="n">original_data</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">"bank customer churn test data prediction.xlsx"</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -11221,6 +11220,158 @@ And if memory is not enough, you can set `force_col_wise=true`.
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c131e55a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'bank customer churn test data prediction.xlsx'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=32103698">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Index(['Credit Score', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance',
+       'Number Of Products', 'Has credit card', 'Is Active Member',
+       'Estimated Salary', 'Churned', 'Age group', 'Balance category',
+       'Credit Score Category', 'Estimated Salary Category',
+       'BalanceSalaryRatio', 'Customer_Status_Predicted'],
+      dtype='object')</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6c6831e6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span><span class="p">[[</span><span class="s1">'Churned'</span><span class="p">,</span><span class="s1">'Customer_Status_Predicted'</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Churned</th>
+<th>Customer_Status_Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Exited</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Exited</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Exited</td>
+<td>1</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>94</th>
+<td>Exited</td>
+<td>0</td>
+</tr>
+<tr>
+<th>95</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+<tr>
+<th>96</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+<tr>
+<th>97</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+<tr>
+<th>98</th>
+<td>Stayed</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>99 rows × 2 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e184ab9e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -11229,28 +11380,9 @@ And if memory is not enough, you can set `force_col_wise=true`.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aa0ef1dc">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <h1 id="Conclusion"><center><strong>Conclusion</strong></center><a class="anchor-link" href="#Conclusion">¶</a></h1><hr/>
-<h4 id="This-project-on-Bank-Customer-Churn-allowed-us-to-explore-the-data-and-identify-the-most-influential-factors-affecting-customer-decisions,-such-as-tenure,-contract-type,-income-level,-and-the-use-of-additional-services.-Machine-learning-models-were-built-to-predict-the-likelihood-of-churn,-providing-accurate-insights-that-help-management-identify-at-risk-customers-and-take-proactive-measures-to-retain-them.-This-highlights-the-practical-value-of-data-analysis-and-artificial-intelligence-in-supporting-business-decisions,-strengthening-customer-loyalty,-and-ensuring-sustainable-growth-for-the-financial-institution."><strong>This project on Bank Customer Churn allowed us to explore the data and identify the most influential factors affecting customer decisions, such as tenure, contract type, income level, and the use of additional services. Machine learning models were built to predict the likelihood of churn, providing accurate insights that help management identify at-risk customers and take proactive measures to retain them. This highlights the practical value of data analysis and artificial intelligence in supporting business decisions, strengthening customer loyalty, and ensuring sustainable growth for the financial institution.</strong><a class="anchor-link" href="#This-project-on-Bank-Customer-Churn-allowed-us-to-explore-the-data-and-identify-the-most-influential-factors-affecting-customer-decisions,-such-as-tenure,-contract-type,-income-level,-and-the-use-of-additional-services.-Machine-learning-models-were-built-to-predict-the-likelihood-of-churn,-providing-accurate-insights-that-help-management-identify-at-risk-customers-and-take-proactive-measures-to-retain-them.-This-highlights-the-practical-value-of-data-analysis-and-artificial-intelligence-in-supporting-business-decisions,-strengthening-customer-loyalty,-and-ensuring-sustainable-growth-for-the-financial-institution.">¶</a></h4>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7138a5d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="This-project-on-Bank-Customer-Churn-allowed-us-to-explore-the-data-and-identify-the-most-influential-factors-affecting-customer-decisions,-such-as-tenure,-contract-type,-income-level,-and-the-use-of-additional-services.-Machine-learning-models-were-built-to-predict-the-likelihood-of-churn,-providing-accurate-insights-that-help-management-identify-at-risk-customers-and-take-proactive-measures-to-retain-them.-This-highlights-the-practical-value-of-data-analysis-and-artificial-intelligence-in-supporting-business-decisions,-strengthening-customer-loyalty,-and-ensuring-sustainable-growth-for-the-financial-institution."><strong>This project on Bank Customer Churn allowed us to explore the data and identify the most influential factors affecting customer decisions, such as tenure, contract type, income level, and the use of additional services. Machine learning models were built to predict the likelihood of churn, providing accurate insights that help management identify at-risk customers and take proactive measures to retain them. This highlights the practical value of data analysis and artificial intelligence in supporting business decisions, strengthening customer loyalty, and ensuring sustainable growth for the financial institution.</strong><a class="anchor-link" href="#This-project-on-Bank-Customer-Churn-allowed-us-to-explore-the-data-and-identify-the-most-influential-factors-affecting-customer-decisions,-such-as-tenure,-contract-type,-income-level,-and-the-use-of-additional-services.-Machine-learning-models-were-built-to-predict-the-likelihood-of-churn,-providing-accurate-insights-that-help-management-identify-at-risk-customers-and-take-proactive-measures-to-retain-them.-This-highlights-the-practical-value-of-data-analysis-and-artificial-intelligence-in-supporting-business-decisions,-strengthening-customer-loyalty,-and-ensuring-sustainable-growth-for-the-financial-institution.">¶</a></h4><hr/>
 <hr/>
 </div>
 </div>
@@ -11277,8 +11409,8 @@ And if memory is not enough, you can set `force_col_wise=true`.
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>[NbConvertApp] Converting notebook Bank Customer Churn BClassification.ipynb to html
-[NbConvertApp] WARNING | Alternative text is missing on 10 image(s).
-[NbConvertApp] Writing 763470 bytes to Bank Customer Churn BClassification.html
+[NbConvertApp] WARNING | Alternative text is missing on 11 image(s).
+[NbConvertApp] Writing 838222 bytes to Bank Customer Churn BClassification.html
 </pre>
 </div>
 </div>
