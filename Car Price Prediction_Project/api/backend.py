@@ -19,16 +19,16 @@ app.add_middleware(CORSMiddleware,
     )  
                 
 # loading Encoders & Model
-with open(r"C:\Users\RPC\Desktop\jupyter files\AI & Data Science projects-github\Car Price Regression_Project\label_encoders.pkl", "rb") as f:
+with open(r"C:\Users\RPC\Desktop\jupyter files\ML & Data Science projects-github\Car Price Prediction_Project\label_encoders.pkl", "rb") as f:
     label_encoders = load(f)
 
-with open(r"C:\Users\RPC\Desktop\jupyter files\AI & Data Science projects-github\Car Price Regression_Project\One_Hot_Encoder.pkl", "rb") as f:
+with open(r"C:\Users\RPC\Desktop\jupyter files\ML & Data Science projects-github\Car Price Prediction_Project\One_Hot_Encoder.pkl", "rb") as f:
     One_Hot_Encoder = load(f)
 
-with open (r"C:\Users\RPC\Desktop\jupyter files\AI & Data Science projects-github\Car Price Regression_Project\scaler.pkl", "rb") as file : 
+with open (r"C:\Users\RPC\Desktop\jupyter files\ML & Data Science projects-github\Car Price Prediction_Project\scaler.pkl", "rb") as file : 
     scaler = load(file)
 
-with open(r"C:\Users\RPC\Desktop\jupyter files\AI & Data Science projects-github\Car Price Regression_Project\RandomForestRegressor_model.pkl","rb") as file2 : 
+with open(r"C:\Users\RPC\Desktop\jupyter files\ML & Data Science projects-github\Car Price Prediction_Project\RandomForestRegressor_model.pkl","rb") as file2 : 
      RandomForestRegressor_model = load(file2)
 
 class CarInput(BaseModel):
