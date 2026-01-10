@@ -16,7 +16,7 @@ app.add_middleware(CORSMiddleware,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
-    )  
+    )
                 
 # loading Encoders & Model
 with open(r"C:\Users\RPC\Desktop\jupyter files\ML & Data Science projects-github\Car Price Prediction_Project\label_encoders.pkl", "rb") as f:
