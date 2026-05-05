@@ -1,0 +1,61 @@
+1) Overall Financial Performance
+
+The company achieved strong results with total revenue of $12.23 million and a gross profit of $3.36 million, representing a gross profit margin of 27.47%.
+
+- Total orders: 700,500.
+
+- Total units sold: 920,200 units.
+
+- Average order value (AOV): $17.45.
+
+
+
+2) Category and Product Analysis
+
+The Toys category leads in revenue, while Electronics leads in profitability:
+
+- Highest Revenue: Toys category with $4.32 million.
+
+- Highest Profit Margin: Electronics at 44.93%, despite having the fewest units sold (115,300 units).
+
+- Top Selling (Units): Arts & Crafts with 269,900 units.
+
+
+
+3) Location and Branch Analysis
+
+Downtown stores are the primary driver of sales:
+
+- Downtown stores account for 55.9% of total revenue.
+
+- Commercial stores follow at 23.2%.
+
+- In terms of store age, established stores contribute the most to revenue at 42.1%.
+
+
+
+4) Seasonal and Timeframe Performance
+
+- Peak Season: Spring is the strongest season, accounting for 36.5% of revenue.
+
+- Peak Months: April, May, and March saw the highest revenue levels (between $1.4 million and $1.5 million per month).
+
+- Weekends: The majority of revenue is generated outside of weekends (over $8 million).
+
+
+
+
+Recommendations:
+
+1) Profitability Recommendation:
+
+Given that the electronics sector achieves the highest profit margin (44.9%) despite low sales, we recommend allocating a targeted marketing campaign to raise awareness of this segment and increase overall revenue.
+
+2) Location Recommendation:
+
+Since downtown branches account for 55.9% of profits, the possibility of expanding in these areas or replicating their successful models in other commercial districts should be explored.
+
+3) Seasonality Recommendation:
+
+Given the significant drop in sales during August, we recommend launching back-to-school promotions or summer sales to stimulate demand during this sluggish month.
+
