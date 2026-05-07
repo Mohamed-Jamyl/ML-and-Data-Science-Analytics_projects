@@ -1,0 +1,17 @@
+Prédiction de la solubilité des médicaments à l’aide de ML ensembliste et de réseaux neuronaux graphiques 
+
+Développé des modèles de régression pour prédire la solubilité des médicaments à partir de données moléculaires.
+
+Conçu des descripteurs moléculaires et des empreintes pour les modèles Random Forest et XGBoost.
+
+Modélisé les structures moléculaires sous forme de graphes pour capturer les relations au niveau des atomes et des liaisons.
+
+Implémenté une architecture de Graph Neural Network (GNN) pour une prédiction sensible à la structure.
+
+Entraîné un modèle AttentiveFP pour exploiter les mécanismes d’attention dans l’apprentissage des représentations moléculaires.
+
+Comparé les modèles classiques ensemblistes avec les approches profondes basées sur les graphes.
+
+Évalué les performances en utilisant les métriques RMSE, MAE et R².
+
+Démontré une meilleure performance prédictive grâce aux modèles de deep learning basés sur les graphes.
